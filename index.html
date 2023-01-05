@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<div class=login>
+  <h1> Predicting Loan Approval</h1>
+
+  <h3>Enter your details</h3>
+  <form action ="{{ url_for('predict')}}"method="post">
+    <input type="text" name="Gender" placeholder="Gender:1->Male;0->Female" required="required"/>
+    <input type="text" name="Married" placeholder="Married:1->Yes;0->No" required="required"/>
+    <input type="text" name="Dependents" placeholder="Dependents" required="required"/>
+    <input type="text" name="Education" placeholder="Education:0->Graduate;1->Not Graduate" required="required"/>
+    <input type="text" name="Self Employed" placeholder="Self Employed:1->Yes;0->No" required="required"/>
+    <input type="text" name="Applicant Income" placeholder="Applicant Income" required="required"/>
+    <input type="text" name="Coapllicant Income" placeholder="Coapllicant Income" required="required"/>
+    <input type="text" name="LoanAmount" placeholder="LoanAmount" required="required"/>
+    <input type="text" name="Loan Amount Term" placeholder="Loan Amount Term" required="required"/>
+    <input type="text" name="Credit History" placeholder="Credit History" required="required"/>
+    <input type="text" name="Property Area" placeholder="2->Urban;1->SemiUrban;0->Rural" required="required"/>
+
+    <button type="submit" class="btn">Predict</button>
+  </form>
+
+  <br>
+  <br>
+  {{prediction_text}}
+
+</div>
+</html>
